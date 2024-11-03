@@ -2,7 +2,7 @@
 
 ;; Copyright 2011 Google Inc. All Rights Reserved.
 
-;; Package-Requires: ((emacs "24"))
+;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: languages
 ;; URL: https://github.com/jhasse/ninja-emacs
 
@@ -99,10 +99,10 @@
 
 ;;;###autoload
 (define-derived-mode ninja-mode prog-mode "ninja"
-  (set (make-local-variable 'comment-start) "#")
-  (set (make-local-variable 'parse-sexp-lookup-properties) t)
-  (set (make-local-variable 'syntax-propertize-function) #'ninja-syntax-propertize)
-  (set (make-local-variable 'indent-line-function) 'ninja-indent-line)
+  (setq-local comment-start "#")
+  (setq-local parse-sexp-lookup-properties t)
+  (setq-local syntax-propertize-function #'ninja-syntax-propertize)
+  (setq-local indent-line-function 'ninja-indent-line)
   (setq font-lock-defaults '(ninja-keywords)))
 
 ;; Run ninja-mode for files ending in .ninja.
