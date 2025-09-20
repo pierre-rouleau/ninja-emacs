@@ -107,7 +107,7 @@
 
 ;; Run ninja-mode for files ending in .ninja.
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.ninja$" . ninja-mode))
+(add-to-list 'auto-mode-alist '("\\.ninja\\'" . ninja-mode))
 
 (provide 'ninja-mode)
 
